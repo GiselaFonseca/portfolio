@@ -1,0 +1,426 @@
+/* Styles généraux */
+body {
+    font-family: Georgia, sans-serif;
+    font-weight: 300;  Optionnel si disponible 
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+.logo {
+    width: 31%;
+    height: auto;
+    flex-shrink: 0;
+}
+.logogi {
+    width: 15%;
+}
+
+/*#about {
+    padding: 20px;
+    max-width: 800px;*/
+  /*  margin: 0 auto;*/
+/*}*/
+.about-container {
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    /*justify-content: center;*/
+
+   /* display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;*/
+}
+/* Mode sombre */
+.dark-mode {
+    background-color: #8d0707;
+    color: #f9f9f9;
+}
+
+/* Barre de navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8d0707;
+    color: white;
+    padding: 15px 20px;
+}
+
+.nav-brand {
+    font-size: 2em;
+    font-family: 'Sacramento', sans-serif;
+    font-variant: small-caps;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+    }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+.icon{
+    width:40px;
+    padding:4px;
+}
+.iconcontainer {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+}
+/* Bouton de changement de thème */
+.theme-button-wrapper {
+    display: flex;
+    align-items: center;
+}
+.titre {
+    font-family: 'Rockwell', sans-serif;
+    /*font-variant: small-caps;*/
+    font-weight: 100;
+    letter-spacing: 0.5px;
+    /*    font-size: 1.2em;*/
+    line-height: 1.6;
+    padding: 10px;
+}
+.apropotxt {
+    font-family: 'Rockwell Nova', sans-serif;
+    /*font-variant: small-caps;*/
+    font-weight: 100;
+    letter-spacing: 0.5px;
+    /*    font-size: 1.2em;*/
+    line-height: 1.6;
+    padding: 40px;
+}
+.txt {
+    font-family: 'Rockwell Nova', sans-serif;
+    /*font-variant: small-caps;*/
+    font-weight: 100;
+    letter-spacing: 0.5px;
+    /*    font-size: 1.2em;*/
+    line-height: 1.6;
+    padding: 20px;
+}
+.theme-button {
+    font-size: 1.2em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    justify-content: center;
+}
+
+/* Sections de contenu */
+h2 {
+    color: #444;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* Portfolio */
+.portfolio-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portfolio-item {
+    /*background: #fff;*/
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 40%;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .portfolio-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Mode sombre pour les cartes */
+.dark-mode .portfolio-item {
+    background: #1e1e1e;
+    border: 1px solid #444;
+}
+
+/* Style du popup */
+.popup-overlay {
+    display: none; /* Masqué par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #ffffff;
+    padding: 20px;
+    width: 49%;
+    max-width: 900px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
+    color: #333;
+}
+
+/* Styles pour le mode sombre */
+.dark-mode {
+    background-color: #121212;
+    color: #ced4da;
+}
+
+/* Styles de base pour le pop-up */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #ffffff;
+    padding: 20px;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 8px;
+    position: relative;
+}
+
+/* Bouton de fermeture du pop-up */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Mode sombre pour le pop-up */
+.dark-mode .popup-content {
+    background: #2a2a2a;
+    color: #f9f9f9;
+}
+
+.popup-image {
+    width: 49%;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+/* Modal (fenêtre d'agrandissement) */
+.modal {
+    display: none; /* Cache la fenêtre au départ */
+    position: fixed;
+    z-index: 1000; /* Assurez-vous que le modal soit au-dessus des autres éléments */
+    left: 0; /* Corrigé de 'l left' à 'left' */
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond sombre semi-transparent */
+}
+
+/* Contenu du modal */
+.modal-content {
+    margin: 5% auto;
+    display: block;
+    max-width: 50%; /* La largeur maximale de l'image */
+    max-height: 80%; /* Vous pouvez ajuster cette valeur selon votre besoin */
+    object-fit: contain; /* Assurez-vous que l'image garde ses proportions */
+}
+
+/* Fermer le modal */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001; /* Le bouton de fermeture doit être au-dessus de l'image */
+}
+
+/* Optionnel : amélioration pour le clic en dehors du modal */
+.modal-content {
+    cursor: pointer; /* Permet de cliquer pour fermer si vous le souhaitez */
+}
+
+/* Bouton de fermeture */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Bouton de fermeture en mode sombre */
+.dark-mode .close-btn {
+    color: #f9f9f9;
+}
+
+/* Footer */
+footer {
+    background-color: #8d0707;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.dark-mode footer {
+    background-color: #1e1e1e;
+    color: #f9f9f9;
+}
+ /* Media Query pour les tablettes et téléphones */
+@media (max-width: 1024px) {
+
+.logo{
+    display: none;
+}
+
+.navbar {
+/*    flex-direction: column;
+    align-items: flex-start;*/
+    padding: 20px;
+}
+
+.nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.portfolio-item {
+    width: 45%; /* Réduit la largeur des items pour les tablettes */
+}
+
+}
+
+/* Media Query pour les téléphones */
+@media (max-width: 768px) {
+    .logo {
+       display:none;
+    }
+
+    .logogi {
+        width: 20%; /* Ajuste la taille du logo */
+    }
+
+    .navbar {
+      /*  flex-direction: column;
+        padding: 20px;*/
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .portfolio-container {
+        gap: 10px;
+    }
+
+    .portfolio-item {
+        width: 100%; /* Les éléments du portfolio prennent toute la largeur */
+        margin-bottom: 20px;
+    }
+
+    .theme-button-wrapper {
+        margin-top: 15px;
+    }
+
+    .theme-button {
+        font-size: 1.5em;
+    }
+}
+
+/* Media Query pour les petits téléphones */
+@media (max-width: 480px) {
+    .logo {
+        display:none;
+    }
+
+    .logogi {
+        width: 40%; /* La taille du logo est adaptée */
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .nav-links {
+        font-size: 14px; /* Réduit la taille des liens de navigation */
+    }
+
+    .portfolio-item {
+        width: 100%; /* Les items prennent toute la largeur */
+    }
+
+    .popup-content {
+        width: 90%; /* Réduit la taille du pop-up */
+    }
+
+    .modal-content {
+        max-width: 90%; /* Réduit la taille du modal */
+        margin: 5% auto;
+    }
+
+    .close {
+        font-size: 30px; /* Ajuste la taille du bouton de fermeture */
+    }
+
+    .theme-button {
+        font-size: 1.2em; /* Réduit la taille du bouton de thème */
+    }
+}
